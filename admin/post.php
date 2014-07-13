@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the user in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO post (post_date,post_date_d,post_content,post_dec, post_title) VALUES ((NOW()),date(NOW()), '$e','$dec', '$subject' )";		
+		$q = "INSERT INTO post (post_date,post_date_d,post_date_last,post_content,post_dec, post_title) VALUES (NOW(),date(NOW()),date(NOW()), '$e','$dec', '$subject' )";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
